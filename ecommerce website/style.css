@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f8f8;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons i {
+    font-size: 20px;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 70vh;
+    background: url('https://img.freepik.com/premium-photo/young-woman-winter-clothes-posing-with-shopping-bags-against-blue-vignette_1134-56555.jpg?ga=GA1.1.1975583425.1722945243&semt=ais_hybrid');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero {
+    width: 100%;
+    height: 70vh;
+    background: url('https://img.freepik.com/premium-photo/young-woman-winter-clothes-posing-with-shopping-bags-against-blue-vignette_1134-56555.jpg?ga=GA1.1.1975583425.1722945243&semt=ais_hybrid');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center; /* Adjust positioning for larger screens */
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        background-size: contain; /* Ensure the whole image is visible */
+        background-position: center; /* Center the image on larger screens */
+        height: 80vh; /* Increase height for better visibility */
+    }
+}
+
+
+/* Products Section */
+.products {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.products h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.products h4 {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.product-section {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.productcard {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.productcard img {
+    width: 100%;
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    max-height: 200px; /* Prevent the image from exceeding a certain height */
+    object-fit: contain; /* Ensure the entire image fits within the container */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5; /* Optional: Add a background color to fill empty space */
+}
+
+
+.productcard h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.productcard p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.productcard .add-to-cart {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background: teal;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.productcard .add-to-cart:hover {
+    background: #006666;
+}
+
+.women-section {
+    background-color: rgb(241, 187, 196);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: gray;
+    color: whitesmoke;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .products h1 {
+        font-size: 20px;
+    }
+
+    .products h4 {
+        font-size: 14px;
+    }
+
+    .product-section {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .productcard img {
+        height: 120px;
+    }
+}
